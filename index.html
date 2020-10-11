@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #gameArea {
+        border: 4px solid green;
+      }
+
+      body {
+        height: 100vh;
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+        );
+        text-align: center;
+        overflow: hidden; /*Hide scrollbars*/
+      }
+      h1 {
+        font-family: Comic Sans MS;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Green Blobs</h1>
+    <canvas id="gameArea" width="800" height="600"></canvas>
+    <script src="index.js"></script>
+  </body>
+</html>
