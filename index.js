@@ -6,6 +6,7 @@ let y = 100;
 let radius = 50;
 let speed = 10;
 
+let spacePressed= false;
 let upPressed = false;
 let downPressed = false;
 let leftPressed = false;
@@ -51,6 +52,10 @@ function inputs() {
   if (rightPressed) {
     x = x + speed;
   }
+  if (spacePressed){
+    radius+=4;
+    
+    }
 }
 
 function drawGreenBlob() {
@@ -99,7 +104,12 @@ function keyDown(event) {
   //right
   if (event.keyCode == 39) {
     rightPressed = true;
+    
   }
+  if (event.keyCode==32) {
+    
+    spacePressed=true;
+    }
 }
 
 function keyUp(event) {
@@ -121,6 +131,10 @@ function keyUp(event) {
   if (event.keyCode == 39) {
     rightPressed = false;
   }
+  if (event.keycode==32) {
+    
+    spacePressed=false;
+    }
 }
 
 drawGame();
